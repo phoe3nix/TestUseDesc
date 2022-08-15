@@ -18,3 +18,5 @@ jobs:
         run: |
           lastTag=$(git log -1 | grep commit)
           echo $lastTag
+          lastCITag=$(git log -1 --author=mobdev@bd.qatarinsurance.com | grep commit)
+          echo $lastCITag
