@@ -17,4 +17,5 @@ jobs:
       - name: check if build is needed and start deploy job on bitrise
         run: |
           if [ "$(git log -1 | grep commit)" != "$(git log -1 --author=mobdev@bd.qatarinsurance.com | grep commit)" ]; then
+            echo Cool
           fi;
