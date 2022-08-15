@@ -16,7 +16,5 @@ jobs:
       
       - name: check if build is needed and start deploy job on bitrise
         run: |
-          lastTag=$(git log -1 | grep commit)
+          lastTag=$(git log -1 --author=mobdev@bd.qatarinsurance.com | grep commit)
           echo $lastTag
-          lastCITag=$(git log -1 | grep Date)
-          echo $lastCITag
